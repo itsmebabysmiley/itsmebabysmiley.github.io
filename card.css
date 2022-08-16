@@ -1,0 +1,23 @@
+.card-border{
+    width: 100%;
+    padding: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.card-border p{
+    text-align: justify;
+    font-family: 'Mitr', sans-serif;
+    font-size: 20px;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active{
+transform: translateY(0);
+opacity: 1;
+}

@@ -1,0 +1,51 @@
+body{
+    font-family: 'Nunito', sans-serif;
+
+}
+body h1,p{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+.happyAni{
+    font-size: 100px;
+    
+}
+header {
+    display: flex;
+    position: fixed;
+    background: #fff;
+    transition: all 250ms;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 9%;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.header-text{
+   margin: 1rem;
+}
+
+.grow{
+    transition: all 0.2s ease-in-out;
+}
+
+.grow:hover{
+    transform: scale(1.2);
+}
+
+header a{
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    color: var(--bs-body-color);
+}
+
+header a:hover{
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    color: var(--bs-body-color);
+    cursor: pointer;
+}
