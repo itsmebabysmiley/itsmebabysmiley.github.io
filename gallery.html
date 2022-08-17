@@ -10,7 +10,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="button.css">
-
+    <link rel="stylesheet" href="card.css">
+    
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,9 +26,86 @@
         <a class="header-text grow" href="gallery.html">Gallery</a>
         <a class="header-text grow">About us</a>
     </header>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 10rem;">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- Contents -->
     <div class="container" style="padding-top: 7rem;">
         <h1>Gallery</h1>
         <p>This site represent our photos together. </p>
+        <div class="gallery">
+            <figure class="gallery__item gallery__item--1 grow">
+                <img src="images/temp.jpeg" class="gallery__img" alt="Image 1">
+              </figure>
+              <figure class="gallery__item gallery__item--2 grow">
+                <img src="images/temp.jpeg" class="gallery__img" alt="Image 2">
+              </figure>
+              <figure class="gallery__item gallery__item--3 grow">
+                <img src="images/temp.jpeg" class="gallery__img" alt="Image 3">
+              </figure>
+              <figure class="gallery__item gallery__item--4 grow">
+                <img src="images/temp.jpeg" class="gallery__img" alt="Image 4">
+              </figure>
+              <figure class="gallery__item gallery__item--5 grow">
+                <img src="images/temp.jpeg" class="gallery__img" alt="Image 5">
+              </figure>
+        </div>
+
+        
     </div>
+
+    
 </html>
+<!-- load JSON File -->
+<script type="text/javascript" src="info.json"></script>
+<script>
+    
+    const exampleModal = document.getElementById('exampleModal')
+    exampleModal.addEventListener('show.bs.modal', event => {
+        // Button that triggered the modal
+        const button = event.relatedTarget
+        // Extract info from data-bs-* attributes
+        const recipient = button.getAttribute('data-bs-whatever')
+        // If necessary, you could initiate an AJAX request here
+        // and then do the updating in a callback.
+        fetch('info.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function(data){
+            console.log(data[0]);
+        })
+        .catch(function (err) {
+            console.log('error: ' + err);
+        });
+        // Update the modal's content.
+        const modalTitle = exampleModal.querySelector('.modal-title')
+        const modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+        modalTitle.textContent = `Test`
+        //modalBodyInput.value = recipient
+    })
+
+
+</script>
+
