@@ -71,9 +71,12 @@
                 <img src="images/4squard2.jpg" class="gallery__img" alt="Image 5" data-bs-toggle="modal" data-bs-target="#exampleModal">
               </figure>
               <figure class="gallery__item gallery__item--6 grow " >
-                <video class="gallery_vdo" id="video"controls="controls" preload="metadata" loop muted>
+                <video class="gallery_vdo" controls="controls" preload="metadata" loop muted>
                   <source src="video/video1.mov" type="video/mp4">
                 </video>
+              </figure>
+              <figure class="gallery__item gallery__item--7 grow">
+                <img src="images/4squard2.jpg" class="gallery__img" alt="Image 5" data-bs-toggle="modal" data-bs-target="#exampleModal">
               </figure>
         </div>
 
@@ -85,14 +88,7 @@
 <!-- load JSON File -->
 <script type="text/javascript" src="info.json"></script>
 <script>
-    var figure = document.getElementById("video");
-    console.log(figure);
-    figure.addEventListener('mouseover',e => {
-      figure.play();
-    });
-    figure.addEventListener('mouseout',e => {
-      figure.pause();
-    });
+    
     const exampleModal = document.getElementById('exampleModal')
     exampleModal.addEventListener('show.bs.modal', event => {
         // Button that triggered the modal

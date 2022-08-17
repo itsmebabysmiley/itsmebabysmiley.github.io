@@ -102,3 +102,10 @@ opacity: 1;
     grid-row-start: 7;
     grid-row-end: 12;
 }
+
+.gallery__item--7 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 10;
+    grid-row-end: 17;
+}
