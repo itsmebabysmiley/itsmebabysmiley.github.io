@@ -33,8 +33,9 @@
     
 </body>
     <header class"active">
-        <a class="header-text grow" href="index.html">Home</a>
+        <a class="header-text grow" href="homepage.html">Home</a>
         <a class="header-text grow" href="gallery.html">Gallery</a>
+        <a class="header-text grow" href="card-aniversery-page.html">Card</a>
         <a class="header-text grow">About us</a>
     </header>
   <!-- Modal -->
@@ -54,7 +55,10 @@
     <div class="container" style="padding-top: 7rem;">
         <h1>Gallery</h1>
         <p>This site represent our photos together. </p>
-        <div class="gallery animate">
+        <div class="reveal">
+
+        </div>
+        <div class="gallery animate" style="margin-top:5rem;">
             <figure class="gallery__item gallery__item--1 grow">
                 <img src="images/image8.PNG" class="gallery__img" alt="Image 1"data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('images/image8.PNG')">
               </figure>
@@ -142,7 +146,29 @@
               <figure class="gallery__item gallery__item--27 grow">
                 <img src="images/image32.JPG" class="gallery__img" alt="Image 8" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('images/image32.JPG')">
               </figure>
-
+              <figure class="gallery__item gallery__item--28 grow">
+                <img src="images/image33.PNG" class="gallery__img" alt="Image 8" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('images/image33.PNG')">
+              </figure>
+              <figure class="gallery__item gallery__item--29 grow">
+                <img src="images/image34.PNG" class="gallery__img" alt="Image 8" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('images/image34.PNG')">
+              </figure>
+              <figure class="gallery__item gallery__item--30 grow">
+                <img src="images/image35.jpg" class="gallery__img" alt="Image 8" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('images/image35.jpg')">
+              </figure>
+              <figure class="gallery__item gallery__item--31 grow">
+                <img src="images/image36.PNG" class="gallery__img" alt="Image 8" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('images/image36.PNG')">
+              </figure>
+              <figure class="gallery__item gallery__item--32 grow">
+                <img src="images/image37.jpg" class="gallery__img" alt="Image 8" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('images/image37.jpg')">
+              </figure>
+              <figure class="gallery__item gallery__item--33 grow " >
+                <video class="gallery_vdo" controls="controls" preload="metadata" muted data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('video/video4.MOV')" width="304.75px" height="635px">
+                  <source src="video/video4.mov" type="video/mp4">
+                </video>
+              </figure>
+              <figure class="gallery__item gallery__item--34 grow">
+                <img src="images/image38.jpg" class="gallery__img" alt="Image 8" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('images/image38.jpg')">
+              </figure>
         </div>
 
         
@@ -160,8 +186,7 @@
         const button = event.relatedTarget
         // Extract info from data-bs-* attributes
         const recipient = button.getAttribute('data-bs-whatever')
-        // If necessary, you could initiate an AJAX request here
-        // and then do the updating in a callback.
+
     })
     function a(img_path){
       // Update the modal's content.
@@ -180,7 +205,7 @@
           if(data.path.startsWith('video')){
             div = `
             <div class="container text-center">
-                <video controls="controls" preload="metadata" loop muted autoplay="autoplay" width="50%">
+                <video controls="controls" preload="metadata" loop muted autoplay="autoplay" width="50%" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                     <source src="${data.path}" type="video/mp4">
                   </video>
                 <p style="padding:1rem; color: gray;">${data.date}</p>
@@ -191,7 +216,7 @@
           }else{
             div = `
             <div class="container text-center">
-              <img src="${data.path}" alt="Image 1" width="50%">
+              <img src="${data.path}" alt="Image 1" width="50%" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
               <p style="padding:1rem; color: gray;">${data.date}</p>
             </div>
             <h6>Description</h6>
