@@ -65,19 +65,20 @@
                 <img src="images/image10.jpg" class="gallery__img" alt="Image 3" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('images/image10.jpg')">
               </figure>
               <figure class="gallery__item gallery__item--4 grow">
-                <img src="images/4squard2.jpg" class="gallery__img" alt="Image 4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="images/image11.jpeg" class="gallery__img" alt="Image 4" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('images/image11.jpeg')">
               </figure>
               <figure class="gallery__item gallery__item--5 grow">
-                <img src="images/4squard2.jpg" class="gallery__img" alt="Image 5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="images/4squard2.jpg" class="gallery__img" alt="Image 5" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('images/4squard2.jpg')">
               </figure>
               <figure class="gallery__item gallery__item--6 grow " >
-                <video class="gallery_vdo" controls="controls" preload="metadata" loop muted>
+                <video class="gallery_vdo" controls="controls" preload="metadata" muted data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('video/video1.mov')">
                   <source src="video/video1.mov" type="video/mp4">
                 </video>
               </figure>
               <figure class="gallery__item gallery__item--7 grow">
-                <img src="images/4squard2.jpg" class="gallery__img" alt="Image 5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="images/image12.PNG" class="gallery__img" alt="Image 7" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="a('images/image12.PNG')">
               </figure>
+
         </div>
 
         
@@ -97,14 +98,12 @@
         const recipient = button.getAttribute('data-bs-whatever')
         // If necessary, you could initiate an AJAX request here
         // and then do the updating in a callback.
-        
     })
     function a(img_path){
       // Update the modal's content.
       const modalTitle = exampleModal.querySelector('.modal-title')
       const modalBodyInput = exampleModal.querySelector('.modal-body')
       
-
       fetch('info.json')
         .then(function (response) {
             return response.json();
@@ -112,14 +111,30 @@
         .then(function(data){
           //modalBodyInput.textContent = data[x].description;
           data = data.find(item => item.path === img_path);
-          let div = `
-          <div class="container text-center">
-            <img src="${data.path}" alt="Image 1" width="50%">
-            <p style="padding:1rem; color: gray;">${data.date}</p>
-          </div>
-          <h6>Description</h6>
-          <p class="details-image" style="text-align:left; padding:1rem;">&nbsp;&nbsp;&nbsp;${data.description}</p>
+          console.log(data);
+          let div;
+          if(data.path.startsWith('video')){
+            div = `
+            <div class="container text-center">
+                <video controls="controls" preload="metadata" loop muted autoplay="autoplay" width="50%">
+                    <source src="${data.path}" type="video/mp4">
+                  </video>
+                <p style="padding:1rem; color: gray;">${data.date}</p>
+            </div>
+            <h6>Description</h6>
+            <p class="details-image" style="text-align:left; padding:1rem;">&nbsp;&nbsp;&nbsp;${data.description}</p>
           `
+          }else{
+            div = `
+            <div class="container text-center">
+              <img src="${data.path}" alt="Image 1" width="50%">
+              <p style="padding:1rem; color: gray;">${data.date}</p>
+            </div>
+            <h6>Description</h6>
+            <p class="details-image" style="text-align:left; padding:1rem;">&nbsp;&nbsp;&nbsp;${data.description}</p>
+            `
+          }
+         
           modalBodyInput.innerHTML = div;
         })
         .catch(function (err) {
@@ -127,11 +142,7 @@
         });
     }
     
-    
-    function hideVideo(e) {
-      
-    }
-    
+
 
 
 </script>
