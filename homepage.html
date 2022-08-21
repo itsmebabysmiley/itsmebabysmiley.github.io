@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="button.css">
     <link rel="stylesheet" href="envelope.css">
     <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="navbar.css">
     <!-- Javascript -->
     <script src="index.js"></script>
     <!-- Google font -->
@@ -25,9 +26,22 @@
 <body>
     <header class"active">
         <a class="header-text grow" href="homepage.html">Home</a>
-        <a class="header-text grow" href="gallery.html">Gallery</a>
+        <div class="navbar">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle header-text grow" href="gallery.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Gallery
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item " href="gallery.html#section1">Images</a></li>
+                  <li><a class="dropdown-item " href="gallery.html#section2">Videos</a></li>
+                  <li><a class="dropdown-item " href="gallery.html#section3">Diary</a></li>
+                </ul>
+              </li>
+        </div>
+        <!-- <a class="header-text grow " href="gallery.html">Gallery</a> -->
         <a class="header-text grow" href="card-aniversery-page.html">Card</a>
         <a class="header-text grow">About us</a>
+        
     </header>
     <!-- Contents -->
     <div class="container" style="padding-top: 7rem;">
@@ -57,13 +71,41 @@
                         <img src="/images/4squard2.jpg" alt="" srcset="" width="50%">
                       </div>
                       <div class="col">
-                        <p>To... my favorite person</p>
-                        <p>
-                            
+                        <p>To...คุณหวานใจ😳</p>
+                        <p style="font-family: 'Mitr', sans-serif;">
+                            &nbsp&nbsp&nbspเรารู้จักกันมาครบ 3 เดือนแล้วนะครับ ขอบคุณนะครับที่เข้ามาเป็นความสุขในทุกๆวัน 
+                            <br/>
+                            &nbsp&nbsp&nbspไม่ว่าจะเจอเรื่องอะไร ไม่ว่าจะดีหรือร้าย ขอให้เราสองคนจับมือผ่านมันไปด้วยกัน เรียนรู้และเติบโตไปพร้อมๆกันนะครับ🤍ให้ผมได้ดูแลพี่ไปนานๆนะครับ เวลาพี่เหนื่อย ท้อ หมดกำลังใจ ขอให้รู้ไว้ว่าพี่ยังมีผมอยู่ข้างๆเสมอ😊ผมจะเป็นอุ๋งให้พี่กอดและซัพพอร์ตพี่ในทุกๆเรื่องเองครับ
+                            <br/>
+                            <br/>
+                            <br/>
+                            Happy Anniversary!
+                            <br/>
+                            รักนะครับ❤️
+                            <br/>
+                            เจ้าหนูของพี่เอิร์น
                         </p>
                       </div>
                     </div>
+                </div>
             </div>
+        </div> 
+        <div style="margin-top:2rem;"></div>
+        <div class="card-border" style="margin-bottom: 5rem;">
+            <div class="container text-center" style="padding:3rem;">
+                <h3 style="font-family: 'Mitr', sans-serif;">มีอะไรให้ดูอีกน๊าา🤔</h3>
+                <div class="row align-items-center">
+                    <div class="col">
+                      <p class="text-center">ดูรูปต่างๆในที่เราเคยถ่ายให้กัน🙂</p>
+                      <button class="button-19 grow" type="button" onclick="javascript:location.href='gallery.html'">กดเลย</button>
+                    </div>
+                    <div class="col">
+                      <p class="text-center">ดูวันครบรอบในอดีต😉</p>
+                      <button class="button-19 grow" type="button" onclick="javascript:location.href='card-aniversery-page.html'">กดเลย</button>
+                    </div>
+                  </div>
+            </div>
+
         </div>
     </div>
 

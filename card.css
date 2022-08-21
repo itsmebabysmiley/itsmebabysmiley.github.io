@@ -33,10 +33,24 @@ opacity: 1;
     border-radius: var(--bs-border-radius);
 }
 
+.card-video-border{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 1.5rem;
+    padding: 1.5rem;
+}
+
+.card-video-no-border{
+    background-color: white;
+
+    margin: 1.5rem;
+    padding: 1.5rem;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(200, 5vw);
+    grid-template-rows: repeat(49, 5vw);
     grid-gap: 15px;
     padding-left: 1rem;
     padding-right: 1rem;

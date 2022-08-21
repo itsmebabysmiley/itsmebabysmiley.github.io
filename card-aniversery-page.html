@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="button.css">
     <link rel="stylesheet" href="envelope.css">
     <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="navbar.css">
     <!-- Javascript -->
     <script src="index.js"></script>
     <!-- Google font -->
@@ -25,9 +26,22 @@
 <body>
     <header class"active">
         <a class="header-text grow" href="homepage.html">Home</a>
-        <a class="header-text grow" href="gallery.html">Gallery</a>
+        <div class="navbar">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle header-text grow" href="gallery.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Gallery
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item " href="gallery.html#section1">Images</a></li>
+                  <li><a class="dropdown-item " href="gallery.html#section2">Videos</a></li>
+                  <li><a class="dropdown-item " href="gallery.html#section3">Diary</a></li>
+                </ul>
+              </li>
+        </div>
+        <!-- <a class="header-text grow " href="gallery.html">Gallery</a> -->
         <a class="header-text grow" href="card-aniversery-page.html">Card</a>
         <a class="header-text grow">About us</a>
+        
     </header>
     <!-- Contents -->
     <div class="container" style="padding-top: 7rem; margin-bottom:10rem;">
